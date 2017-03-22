@@ -1,7 +1,7 @@
 /*!
     Title: Dev Portfolio Template
-    Version: 1.1.1
-    Last Change: 03/19/17
+    Version: 1.1.2
+    Last Change: 03/21/17
     Author: Ryan Fitzgerald
     Repo: https://github.com/RyanFitzgerald/devportfolio-template
     Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
@@ -202,7 +202,7 @@ header {
     top: 10px;
     color: $base-color;
     font-size: 1.5em;
-    z-index: 10;
+    z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
     background: $background;
@@ -345,14 +345,21 @@ p.about-me-content {
 
 #lead {
     position: relative;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1080px;
     background: url(../images/lead-bg.jpg);
     background-size: cover;
-    padding: 250px 15px;
+    padding: 15px;
+    overflow: hidden;
 }
 
 #lead-content {
-    position: relative;
+    position: absolute;
     z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 
     h1, h2 {
@@ -739,7 +746,7 @@ p.about-me-content {
 
         &:focus {
             outline: none;
-            background: darken(#2196f3, 10%);
+            background: darken($base-color, 25%);
         }
     }
 
@@ -805,10 +812,18 @@ p.about-me-content {
 @media only screen and (max-width : 992px) {
 
     #lead {
+        height: auto;
+        min-height: auto;
+        max-height: auto;
         padding: 100px 15px;
     }
 
     #lead-content {
+        position: relative;
+        transform: none;
+        left: auto;
+        top: auto;
+
         h1 {
             font-size: 3em;
         }
