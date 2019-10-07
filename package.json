@@ -11,7 +11,10 @@
 	"coding",
     "dev"
   ],
-  "author": "Ryan Fitzgerald",
+	"scripts":{
+	"build":""
+	}
+  "author": "Enoch Nyako",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
