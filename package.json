@@ -13,7 +13,7 @@
   ],
 	"scripts":{
 	"build":""
-	}
+	},
   "author": "Enoch Nyako",
   "license": "MIT",
   "devDependencies": {
